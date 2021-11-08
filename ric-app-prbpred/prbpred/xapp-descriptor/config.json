@@ -1,12 +1,12 @@
 {
         "xapp_name": "prbpredxapp",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "containers": [
             {
                 "name": "prbpredxapp",
                 "image": {
                     "registry": "nexus3.o-ran-sc.org:10002",
-                    "name": "o-ran-sc/ric-app-prbpred",
+                    "name": "o-ran-sc/ric-app-prbpredxapp",
                     "tag": "0.0.2"
                 }
             }

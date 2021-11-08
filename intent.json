@@ -1,0 +1,5 @@
+{
+        "modelVersion" : "1.0.0",
+        "modelname":" prb_pred_model.pkl",
+        "modelstoreUrl": "http://91.49.46.222:10001/model_store"
+}
