@@ -26,3 +26,4 @@ The pre-trained model and model specific implementation for PRB developed by Tea
 9.	https://github.com/o-ran-sc
 10.	https://lists.o-ran-sc.org/g/main/topics
 
+docker run -it a1orch:1.0 /bin/bash

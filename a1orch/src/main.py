@@ -44,11 +44,11 @@ def start(thread=False):
     for "real" (no thread, real SDL), but also easily modified for unit testing
     (e.g., use_fake_sdl). The defaults for this function are for the Dockerized xapp.
     """
-    logger.debug("pred xApp starting")
+    logger.debug("xApp starting")
     global pred_xapp, pred
     fake_sdl = os.environ.get("USE_FAKE_SDL", None)
     pred_xapp = RMRXapp(pred_default_handler, rmr_port=4560, post_init=post_init, use_fake_sdl=bool(fake_sdl))
-    logger.debug("pred_xapp created@@@")
+    logger.debug("xApp created")
     a1_intf = A1PolicyInterface(pred_xapp)
     pred_xapp.register_callback(a1_intf.request_handler,Constants.A1_POLICY_REQ)
     a1_intf.send_a1_policy_query()
