@@ -1,0 +1,5 @@
+{
+        "srcName" : "time.series.data",
+        "modelName":"nonml.gaussian",
+        "sinkName": "flex.ric"
+}

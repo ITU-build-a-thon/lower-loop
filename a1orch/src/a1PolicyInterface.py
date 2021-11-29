@@ -73,6 +73,9 @@ class A1PolicyInterface:
         'sink':sink,
         }
         URL= Constants.ORCHESTRATION_ENDPOINT
-        r = requests.post(url = URL, data = DATA)
+        try:
+            r = requests.post(url = URL, data = DATA)
+        except requests.exceptions.RequestException as e:
+            pass
         
         logger.debug("sent payload to orchestrator ")
