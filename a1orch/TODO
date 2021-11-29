@@ -1,0 +1,2 @@
+1. Pass orchestrator_endpoint URI by xapp descriptor
+2. Explore if this code can run outside xapp/docker natively on server(How will RMR/SDL work in such cases?)

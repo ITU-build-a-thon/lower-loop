@@ -1,0 +1,52 @@
+{
+        "xapp_name": "a1orch",
+        "version": "0.0.1",
+        "containers": [
+            {
+                "name": "a1orch",
+                "image": {
+                    "registry": "nexus3.o-ran-sc.org:10002",
+                    "name": "o-ran-sc/ric-app-a1orch",
+                    "tag": "0.0.1"
+                }
+            }
+        ],
+        "messaging": {
+            "ports": [
+                 {
+                "name": "http",
+                "container": "a1orch",
+                "port": 10009,
+                "description": "http service"
+                },
+                {
+                    "name": "rmr-data",
+                    "container": "a1orch",
+                    "port": 4560,
+                    "rxMessages": [ "A1_POLICY_REQ"],
+                    "txMessages": [ "A1_POLICY_RESP","A1_POLICY_QUERY" ],
+                    "policies": [20008],
+                    "description": "rmr receive data port "
+                },
+                {
+                    "name": "rmr-route",
+                    "container": "a1orch",
+                    "port": 4561,
+                    "description": "rmr route port "
+                }
+            ]
+        },
+        "rmr": {
+            "protPort": "tcp:4560",
+            "maxSize": 2072,
+            "numWorkers": 1,
+            "txMessages": [
+                "A1_POLICY_RESP",
+                "A1_POLICY_QUERY"
+            ],
+            "rxMessages": [
+                "A1_POLICY_REQ"
+            ],
+            "policies": [20008]
+        }
+    }
